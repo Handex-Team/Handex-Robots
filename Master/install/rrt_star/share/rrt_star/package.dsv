@@ -1,0 +1,8 @@
+source;share/rrt_star/hook/cmake_prefix_path.ps1
+source;share/rrt_star/hook/cmake_prefix_path.dsv
+source;share/rrt_star/hook/cmake_prefix_path.sh
+source;share/rrt_star/local_setup.bash
+source;share/rrt_star/local_setup.dsv
+source;share/rrt_star/local_setup.ps1
+source;share/rrt_star/local_setup.sh
+source;share/rrt_star/local_setup.zsh

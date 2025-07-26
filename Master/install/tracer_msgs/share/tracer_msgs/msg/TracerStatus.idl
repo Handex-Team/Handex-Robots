@@ -1,0 +1,45 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from tracer_msgs/msg/TracerStatus.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+#include "tracer_msgs/msg/TracerActuatorState.idl"
+
+module tracer_msgs {
+  module msg {
+    typedef tracer_msgs::msg::TracerActuatorState tracer_msgs__msg__TracerActuatorState;
+    typedef tracer_msgs__msg__TracerActuatorState tracer_msgs__msg__TracerActuatorState__2[2];
+    module TracerStatus_Constants {
+      const int8 MOTOR_ID_FRONT_RIGHT = 0;
+      const int8 MOTOR_ID_FRONT_LEFT = 1;
+      const int8 MOTOR_ID_REAR_RIGHT = 2;
+      const int8 MOTOR_ID_REAR_LEFT = 3;
+      const int8 LIGHT_ID_FRONT = 0;
+      const int8 LIGHT_ID_REAR = 1;
+    };
+    struct TracerStatus {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "motion state")
+      double linear_velocity;
+
+      double angular_velocity;
+
+      @verbatim (language="comment", text=
+        " base state" "\n"
+        "uint8 vehicle_state")
+      uint8 control_mode;
+
+      uint16 error_code;
+
+      double battery_voltage;
+
+      @verbatim (language="comment", text=
+        "motor state")
+      tracer_msgs__msg__TracerActuatorState__2 actuator_states;
+
+      boolean light_control_enabled;
+    };
+  };
+};
